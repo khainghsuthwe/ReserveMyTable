@@ -1,0 +1,211 @@
+{
+    "restaurants": [
+      {
+        "id": "1",
+        "name": "The Olive Bistro",
+        "location": "123 Main St, City",
+        "hours": "10:00 AM - 10:00 PM",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+        "diningPhotos": [
+          "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+          "https://images.unsplash.com/photo-1578474846511-04ba529f0b88"
+        ],
+        "tableTypes": [
+          { "type": "standard", "description": "4 seats, cozy indoor setting" },
+          { "type": "premium", "description": "6 seats, window view" }
+        ],
+        "menu": [
+          {
+            "name": "Margherita Pizza",
+            "description": "Classic pizza with fresh tomatoes, mozzarella, and basil",
+            "price": 12.99,
+            "image": "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6"
+          },
+          {
+            "name": "Grilled Salmon",
+            "description": "Fresh salmon with lemon herb sauce and vegetables",
+            "price": 18.99,
+            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Spice Haven",
+        "location": "456 Oak Ave, City",
+        "hours": "11:00 AM - 11:00 PM",
+        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9",
+        "diningPhotos": [
+          "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+          "https://images.unsplash.com/photo-1514933651103-005eec06c04b"
+        ],
+        "tableTypes": [
+          { "type": "standard", "description": "4 seats, vibrant decor" },
+          { "type": "premium", "description": "8 seats, private booth" }
+        ],
+        "menu": [
+          {
+            "name": "Butter Chicken",
+            "description": "Tender chicken in a creamy tomato sauce with naan",
+            "price": 14.99,
+            "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398"
+          },
+          {
+            "name": "Mango Lassi",
+            "description": "Refreshing yogurt-based mango drink",
+            "price": 4.99,
+            "image": "https://images.unsplash.com/photo-1606755227181-389f74395190"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Urban Bites",
+        "location": "789 Pine Rd, City",
+        "hours": "09:00 AM - 09:00 PM",
+        "image": "https://images.unsplash.com/photo-1498654200943-1088dd4438ae",
+        "diningPhotos": [],
+        "tableTypes": [
+          { "type": "standard", "description": "4 seats, modern decor" }
+        ],
+        "menu": [
+          {
+            "name": "Avocado Toast",
+            "description": "Toasted sourdough with avocado, cherry tomatoes, and poached egg",
+            "price": 9.99,
+            "image": "https://images.unsplash.com/photo-1585238342028-9ff3cf0ef86e"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Sushi Wave",
+        "location": "321 Bay St, City",
+        "hours": "12:00 PM - 10:00 PM",
+        "image": "https://images.unsplash.com/photo-1553621042-f6e147245754",
+        "diningPhotos": [],
+        "tableTypes": [
+          { "type": "bar", "description": "Counter seating for 2" },
+          { "type": "private", "description": "Private tatami room for 6" }
+        ],
+        "menu": [
+          {
+            "name": "Tuna Sashimi",
+            "description": "Fresh sliced tuna served with soy sauce and wasabi",
+            "price": 16.50,
+            "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Burger House",
+        "location": "999 Market St, City",
+        "hours": "11:00 AM - 11:00 PM",
+        "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+        "diningPhotos": [],
+        "tableTypes": [
+          { "type": "standard", "description": "4 seats, casual booth" }
+        ],
+        "menu": [
+          {
+            "name": "Cheeseburger Deluxe",
+            "description": "Grilled beef patty, cheddar, lettuce, tomato, onion",
+            "price": 11.99,
+            "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+          }
+        ]
+      }
+    ],
+    "tableAvailability": [
+      {
+        "id": "1",
+        "date": "2025-05-07",
+        "time": "18:00",
+        "available": 5,
+        "reserved": 2,
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+      },
+      {
+        "id": "2",
+        "date": "2025-05-07",
+        "time": "19:00",
+        "available": 3,
+        "reserved": 4,
+        "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696"
+      },
+      {
+        "id": "3",
+        "date": "2025-05-08",
+        "time": "20:00",
+        "available": 2,
+        "reserved": 6,
+        "image": "https://images.unsplash.com/photo-1574755397413-5d6a1a6ec2c4"
+      },
+      {
+        "id": "4",
+        "date": "2025-05-08",
+        "time": "21:00",
+        "available": 4,
+        "reserved": 1,
+        "image": "https://images.unsplash.com/photo-1555992336-03a23c7b20b4"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "1",
+        "restaurantId": "1",
+        "userId": "1",
+        "userName": "John Doe",
+        "rating": 4,
+        "comment": "Great food and ambiance, but service was a bit slow.",
+        "date": "2025-05-01"
+      },
+      {
+        "id": "2",
+        "restaurantId": "1",
+        "userId": "2",
+        "userName": "Jane Smith",
+        "rating": 5,
+        "comment": "Amazing experience! Will definitely come back.",
+        "date": "2025-05-02"
+      },
+      {
+        "id": "3",
+        "restaurantId": "2",
+        "userId": "3",
+        "userName": "Alice Brown",
+        "rating": 4,
+        "comment": "Loved the spicy flavors, great decor!",
+        "date": "2025-05-03"
+      },
+      {
+        "id": "4",
+        "restaurantId": "3",
+        "userId": "4",
+        "userName": "Bob Williams",
+        "rating": 3,
+        "comment": "Good for a quick bite, but a bit noisy.",
+        "date": "2025-05-04"
+      },
+      {
+        "id": "5",
+        "restaurantId": "4",
+        "userId": "5",
+        "userName": "Emily Zhang",
+        "rating": 5,
+        "comment": "Best sushi I've had in years. Will return for sure.",
+        "date": "2025-05-05"
+      },
+      {
+        "id": "6",
+        "restaurantId": "5",
+        "userId": "6",
+        "userName": "Carlos Rivera",
+        "rating": 4,
+        "comment": "Great burgers and fast service. Perfect for lunch breaks.",
+        "date": "2025-05-06"
+      }
+    ]
+  }
+  
