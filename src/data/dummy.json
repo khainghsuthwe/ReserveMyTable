@@ -1,211 +1,555 @@
 {
-    "restaurants": [
-      {
-        "id": "1",
-        "name": "The Olive Bistro",
-        "location": "123 Main St, City",
-        "hours": "10:00 AM - 10:00 PM",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
-        "diningPhotos": [
-          "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
-          "https://images.unsplash.com/photo-1578474846511-04ba529f0b88"
-        ],
-        "tableTypes": [
-          { "type": "standard", "description": "4 seats, cozy indoor setting" },
-          { "type": "premium", "description": "6 seats, window view" }
-        ],
-        "menu": [
-          {
-            "name": "Margherita Pizza",
-            "description": "Classic pizza with fresh tomatoes, mozzarella, and basil",
-            "price": 12.99,
-            "image": "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6"
-          },
-          {
-            "name": "Grilled Salmon",
-            "description": "Fresh salmon with lemon herb sauce and vegetables",
-            "price": 18.99,
-            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "name": "Spice Haven",
-        "location": "456 Oak Ave, City",
-        "hours": "11:00 AM - 11:00 PM",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9",
-        "diningPhotos": [
-          "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
-          "https://images.unsplash.com/photo-1514933651103-005eec06c04b"
-        ],
-        "tableTypes": [
-          { "type": "standard", "description": "4 seats, vibrant decor" },
-          { "type": "premium", "description": "8 seats, private booth" }
-        ],
-        "menu": [
-          {
-            "name": "Butter Chicken",
-            "description": "Tender chicken in a creamy tomato sauce with naan",
-            "price": 14.99,
-            "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398"
-          },
-          {
-            "name": "Mango Lassi",
-            "description": "Refreshing yogurt-based mango drink",
-            "price": 4.99,
-            "image": "https://images.unsplash.com/photo-1606755227181-389f74395190"
-          }
-        ]
-      },
-      {
-        "id": "3",
-        "name": "Urban Bites",
-        "location": "789 Pine Rd, City",
-        "hours": "09:00 AM - 09:00 PM",
-        "image": "https://images.unsplash.com/photo-1498654200943-1088dd4438ae",
-        "diningPhotos": [],
-        "tableTypes": [
-          { "type": "standard", "description": "4 seats, modern decor" }
-        ],
-        "menu": [
-          {
-            "name": "Avocado Toast",
-            "description": "Toasted sourdough with avocado, cherry tomatoes, and poached egg",
-            "price": 9.99,
-            "image": "https://images.unsplash.com/photo-1585238342028-9ff3cf0ef86e"
-          }
-        ]
-      },
-      {
-        "id": "4",
-        "name": "Sushi Wave",
-        "location": "321 Bay St, City",
-        "hours": "12:00 PM - 10:00 PM",
-        "image": "https://images.unsplash.com/photo-1553621042-f6e147245754",
-        "diningPhotos": [],
-        "tableTypes": [
-          { "type": "bar", "description": "Counter seating for 2" },
-          { "type": "private", "description": "Private tatami room for 6" }
-        ],
-        "menu": [
-          {
-            "name": "Tuna Sashimi",
-            "description": "Fresh sliced tuna served with soy sauce and wasabi",
-            "price": 16.50,
-            "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
-          }
-        ]
-      },
-      {
-        "id": "5",
-        "name": "Burger House",
-        "location": "999 Market St, City",
-        "hours": "11:00 AM - 11:00 PM",
-        "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
-        "diningPhotos": [],
-        "tableTypes": [
-          { "type": "standard", "description": "4 seats, casual booth" }
-        ],
-        "menu": [
-          {
-            "name": "Cheeseburger Deluxe",
-            "description": "Grilled beef patty, cheddar, lettuce, tomato, onion",
-            "price": 11.99,
-            "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
-          }
-        ]
-      }
-    ],
-    "tableAvailability": [
-      {
-        "id": "1",
-        "date": "2025-05-07",
-        "time": "18:00",
-        "available": 5,
-        "reserved": 2,
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-      },
-      {
-        "id": "2",
-        "date": "2025-05-07",
-        "time": "19:00",
-        "available": 3,
-        "reserved": 4,
-        "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696"
-      },
-      {
-        "id": "3",
-        "date": "2025-05-08",
-        "time": "20:00",
-        "available": 2,
-        "reserved": 6,
-        "image": "https://images.unsplash.com/photo-1574755397413-5d6a1a6ec2c4"
-      },
-      {
-        "id": "4",
-        "date": "2025-05-08",
-        "time": "21:00",
-        "available": 4,
-        "reserved": 1,
-        "image": "https://images.unsplash.com/photo-1555992336-03a23c7b20b4"
-      }
-    ],
-    "reviews": [
-      {
-        "id": "1",
-        "restaurantId": "1",
-        "userId": "1",
-        "userName": "John Doe",
-        "rating": 4,
-        "comment": "Great food and ambiance, but service was a bit slow.",
-        "date": "2025-05-01"
-      },
-      {
-        "id": "2",
-        "restaurantId": "1",
-        "userId": "2",
-        "userName": "Jane Smith",
-        "rating": 5,
-        "comment": "Amazing experience! Will definitely come back.",
-        "date": "2025-05-02"
-      },
-      {
-        "id": "3",
-        "restaurantId": "2",
-        "userId": "3",
-        "userName": "Alice Brown",
-        "rating": 4,
-        "comment": "Loved the spicy flavors, great decor!",
-        "date": "2025-05-03"
-      },
-      {
-        "id": "4",
-        "restaurantId": "3",
-        "userId": "4",
-        "userName": "Bob Williams",
-        "rating": 3,
-        "comment": "Good for a quick bite, but a bit noisy.",
-        "date": "2025-05-04"
-      },
-      {
-        "id": "5",
-        "restaurantId": "4",
-        "userId": "5",
-        "userName": "Emily Zhang",
-        "rating": 5,
-        "comment": "Best sushi I've had in years. Will return for sure.",
-        "date": "2025-05-05"
-      },
-      {
-        "id": "6",
-        "restaurantId": "5",
-        "userId": "6",
-        "userName": "Carlos Rivera",
-        "rating": 4,
-        "comment": "Great burgers and fast service. Perfect for lunch breaks.",
-        "date": "2025-05-06"
-      }
-    ]
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "The Olive Bistro",
+      "location": "123 Main St, City",
+      "hours": "10:00 AM - 10:00 PM",
+      "phone": "(555) 123-4567",
+      "cuisine": "Italian",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+      "diningPhotos": [
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+        "https://images.unsplash.com/photo-1578474846511-04ba529f0b88"
+      ],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, cozy indoor setting" },
+        { "type": "premium", "description": "6 seats, window view" }
+      ],
+      "menu": [
+        {
+          "name": "Margherita Pizza",
+          "description": "Classic pizza with fresh tomatoes, mozzarella, and basil",
+          "price": 12.99,
+          "image": "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6"
+        },
+        {
+          "name": "Grilled Salmon",
+          "description": "Fresh salmon with lemon herb sauce and vegetables",
+          "price": 18.99,
+          "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
+        },
+        {
+          "name": "Beef Tacos",
+          "description": "Spiced ground beef with lettuce, cheese, and salsa in a crispy shell",
+          "price": 10.99,
+          "image": "https://images.unsplash.com/photo-1687881063470-a78e6ea2590e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJlZWYlMjB0YWNvc3xlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+          "name": "Chicken Alfredo Pasta",
+          "description": "Creamy Alfredo sauce with grilled chicken over fettuccine",
+          "price": 14.50,
+          "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0"
+        },
+        {
+          "name": "Caesar Salad",
+          "description": "Romaine lettuce, croutons, parmesan, and Caesar dressing",
+          "price": 8.99,
+          "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+          "name": "Miso Ramen",
+          "description": "Savory miso broth with noodles, pork slices, and egg",
+          "price": 13.75,
+          "image": "https://plus.unsplash.com/premium_photo-1694547926001-f2151e4a476b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFtZW58ZW58MHx8MHx8fDA%3D"
+        }
+        
+       
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Spice Haven",
+      "location": "456 Oak Ave, City",
+      "hours": "11:00 AM - 11:00 PM",
+      "phone": "(555) 234-5678",
+      "cuisine": "Indian",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9",
+      "diningPhotos": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+        "https://images.unsplash.com/photo-1514933651103-005eec06c04b"
+      ],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, vibrant decor" },
+        { "type": "premium", "description": "8 seats, private booth" }
+      ],
+      "menu": [
+        {
+          "name": "Butter Chicken",
+          "description": "Tender chicken in a creamy tomato sauce with naan",
+          "price": 14.99,
+          "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398"
+        },
+        {
+          "name": "Mango Lassi",
+          "description": "Refreshing yogurt-based mango drink",
+          "price": 4.99,
+          "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuZ28lMjBsYXNzaXxlbnwwfHwwfHx8MA%3D%3D"
+        }, 
+        {
+          "name": "Paneer Tikka Masala",
+          "description": "Grilled paneer cubes in a creamy tomato gravy",
+          "price": 13.25,
+          "image": "https://images.pexels.com/photos/12737920/pexels-photo-12737920.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Lamb Rogan Josh",
+          "description": "Tender lamb cooked in rich Kashmiri spices",
+          "price": 16.75,
+          "image": "https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Garlic Naan",
+          "description": "Soft Indian flatbread with garlic and butter",
+          "price": 3.50,
+          "image": "https://images.pexels.com/photos/20446413/pexels-photo-20446413/free-photo-of-indian-naan-bread-with-additions.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Urban Bites",
+      "location": "789 Pine Rd, City",
+      "hours": "09:00 AM - 09:00 PM",
+      "phone": "(555) 345-6789",
+      "cuisine": "Cafe",
+      "image": "https://images.unsplash.com/photo-1498654200943-1088dd4438ae",
+      "diningPhotos": [],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, modern decor" }
+      ],
+      "menu": [
+        {
+          "name": "Avocado Toast",
+          "description": "Toasted sourdough with avocado, cherry tomatoes, and poached egg",
+          "price": 9.99,
+          "image": "https://images.unsplash.com/photo-1585238342028-9ff3cf0ef86e"
+        },
+        {
+          "name": "Flat White",
+          "description": "Velvety smooth espresso-based coffee with steamed milk",
+          "price": 4.00,
+          "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772"
+        },      
+        {
+          "name": "Blueberry Muffin",
+          "description": "Soft muffin filled with fresh blueberries",
+          "price": 3.25,
+          "image": "https://images.unsplash.com/photo-1598373182133-e301b9bfb5c1"
+        },
+        {
+          "name": "Quinoa Salad",
+          "description": "Healthy salad with quinoa, mixed greens, and vinaigrette",
+          "price": 10.50,
+          "image": "https://images.unsplash.com/photo-1589927986089-358123789b0c"
+        },
+        {
+          "name": "Chocolate Croissant",
+          "description": "Flaky pastry filled with rich chocolate",
+          "price": 2.75,
+          "image": "https://images.unsplash.com/photo-1598515217137-603d9780a041"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Sushi Wave",
+      "location": "321 Bay St, City",
+      "hours": "12:00 PM - 10:00 PM",
+      "phone": "(555) 456-7890",
+      "cuisine": "Japanese",
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754",
+      "diningPhotos": [],
+      "tableTypes": [
+        { "type": "bar", "description": "Counter seating for 2" },
+        { "type": "private", "description": "Private tatami room for 6" }
+      ],
+      "menu": [
+        {
+          "name": "Tuna Sashimi",
+          "description": "Fresh sliced tuna served with soy sauce and wasabi",
+          "price": 16.50,
+          "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+        },
+        {
+          "name": "California Roll",
+          "description": "Crab, avocado, and cucumber rolled in sushi rice",
+          "price": 8.50,
+          "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+        },
+        {
+          "name": "Tempura Udon",
+          "description": "Thick udon noodles in broth with tempura shrimp",
+          "price": 12.00,
+          "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+        },
+        {
+          "name": "Sushi Platter",
+          "description": "Assortment of fresh nigiri and maki rolls",
+          "price": 22.00,
+          "image": "https://images.unsplash.com/photo-1542736667-069246bdbc82"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Burger House",
+      "location": "999 Market St, City",
+      "hours": "11:00 AM - 11:00 PM",
+      "phone": "(555) 567-8901",
+      "cuisine": "American",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+      "diningPhotos": [],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, casual booth" }
+      ],
+      "menu": [
+        {
+          "name": "Cheeseburger Deluxe",
+          "description": "Grilled beef patty, cheddar, lettuce, tomato, onion",
+          "price": 11.99,
+          "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+        },
+        {
+          "name": "Veggie Burger",
+          "description": "Grilled plant-based patty with lettuce, tomato, and vegan mayo",
+          "price": 11.25,
+          "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Thai Garden",
+      "location": "101 Lotus Ln, City",
+      "hours": "11:30 AM - 10:30 PM",
+      "phone": "(555) 678-9012",
+      "cuisine": "Thai",
+      "image": "https://images.unsplash.com/photo-1604908177873-d084d1e3a556",
+      "diningPhotos": [
+        "https://images.unsplash.com/photo-1564758866817-73a6d45b8f50"
+      ],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, indoor garden view" },
+        { "type": "terrace", "description": "2 seats, outdoor seating" }
+      ],
+      "menu": [
+        {
+          "name": "Pad Thai",
+          "description": "Stir-fried rice noodles with tamarind sauce, tofu, peanuts",
+          "price": 11.50,
+          "image": "https://images.unsplash.com/photo-1600628422011-7d037b2145a3"
+        },
+        {
+          "name": "Lamb Biryani",
+          "description": "Spiced basmati rice with tender lamb and aromatic herbs",
+          "price": 15.50,
+          "image": "https://images.unsplash.com/photo-1613145991214-3e8fcf86944e"
+        }
+        
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Casa Mexicana",
+      "location": "202 Fiesta Blvd, City",
+      "hours": "12:00 PM - 11:00 PM",
+      "phone": "(555) 789-0123",
+      "cuisine": "Mexican",
+      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+      "diningPhotos": [
+        "https://plus.unsplash.com/premium_photo-1680116993491-76d3925b95a7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWV4aWNpYW4lMjBjdWlzaW5lc3xlbnwwfHwwfHx8MA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHN8ZW58MHx8MHx8fDA%3D"
+      ],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, festive colors" },
+        { "type": "rooftop", "description": "6 seats, skyline view" }
+      ],
+      "menu": [
+        {
+          "name": "Tacos Al Pastor",
+          "description": "Marinated pork tacos with pineapple, onion, cilantro",
+          "price": 9.99,
+          "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Mediterraneo",
+      "location": "303 Olive Dr, City",
+      "hours": "10:00 AM - 9:30 PM",
+      "phone": "(555) 890-1234",
+      "cuisine": "Mediterranean",
+      "image": "https://plus.unsplash.com/premium_photo-1723491285855-f1035c4c703c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHJlc3RhdXJhbnRzfGVufDB8fDB8fHww",
+      "diningPhotos": [],
+      "tableTypes": [
+        { "type": "standard", "description": "4 seats, coastal decor" },
+        { "type": "balcony", "description": "2 seats, sea breeze view" }
+      ],
+      "menu": [
+        {
+          "name": "Grilled Halloumi Salad",
+          "description": "Mixed greens with grilled halloumi, olives, lemon vinaigrette",
+          "price": 13.25,
+          "image": "https://images.unsplash.com/photo-1613145993483-6a6fbfbb9d44"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Le Petit Chef",
+      "location": "404 Rue de Paris, City",
+      "hours": "6:00 PM - 10:00 PM",
+      "phone": "(555) 901-2345",
+      "cuisine": "French",
+      "image": "https://images.unsplash.com/photo-1633082559031-da8af4abdcf9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHJlc3RhdXJhbnRzfGVufDB8fDB8fHww",
+      "diningPhotos": [],
+      "tableTypes": [
+        { "type": "standard", "description": "2 seats, candle-lit table" }
+      ],
+      "menu": [
+        {
+          "name": "Coq au Vin",
+          "description": "Chicken braised in red wine with mushrooms and onions",
+          "price": 21.00,
+          "image": "https://images.unsplash.com/photo-1604908554159-0fd0c2f21dc5"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Seoul Kitchen",
+      "location": "505 Han St, City",
+      "hours": "12:00 PM - 10:00 PM",
+      "phone": "(555) 012-3456",
+      "cuisine": "Korean",
+      "image": "https://plus.unsplash.com/premium_photo-1706571130009-51c849d9b908?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGtvcmFlbiUyMHJlc3RhdXJhbnRzfGVufDB8fDB8fHww",
+      "diningPhotos": [],
+      "tableTypes": [
+        { "type": "grill", "description": "4 seats, built-in BBQ grill" },
+        { "type": "booth", "description": "6 seats, semi-private" }
+      ],
+      "menu": [
+        {
+          "name": "Bibimbap",
+          "description": "Mixed rice bowl with vegetables, beef, egg, and gochujang",
+          "price": 12.50,
+          "image": "https://images.unsplash.com/photo-1598515217137-603d9780a041"
+        }
+      ]
+    }
+  ],
+  "cuisines": [
+    {
+      "id": "1",
+      "name": "Italian",
+      "image": "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXRhbGlhbiUyMGN1aXNpbmV8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": "2",
+      "name": "Indian",
+      "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398"
+    },
+    {
+      "id": "3",
+      "name": "Cafe",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+    },
+    {
+      "id": "4",
+      "name": "Japanese",
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754"
+    },
+    {
+      "id": "5",
+      "name": "American",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    }
+  ],
+  "tableAvailability": [
+    {
+      "id": "1",
+      "date": "2025-05-07",
+      "time": "18:00",
+      "restaurantId": "1",
+      "available": 5,
+      "reserved": 2,
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    },
+    {
+      "id": "2",
+      "date": "2025-05-07",
+      "time": "19:00",
+      "restaurantId": "1",
+      "available": 3,
+      "reserved": 4,
+      "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696"
+    },
+    {
+      "id": "3",
+      "date": "2025-05-08",
+      "time": "20:00",
+      "restaurantId": "3",
+      "available": 2,
+      "reserved": 6,
+      "image": "https://images.unsplash.com/photo-1574755397413-5d6a1a6ec2c4"
+    },
+    {
+      "id": "4",
+      "date": "2025-05-08",
+      "time": "21:00",
+      "restaurantId": "5",
+      "available": 4,
+      "reserved": 1,
+      "image": "https://images.unsplash.com/photo-1555992336-03a23c7b20b4"
+    }
+  ],
+ "reviews": [
+  {
+    "id": "1",
+    "restaurantId": "1",
+    "userId": "1",
+    "userName": "John Doe",
+    "rating": 4,
+    "comment": "Great food and ambiance, but service was a bit slow.",
+    "date": "2025-05-01"
+  },
+  {
+    "id": "2",
+    "restaurantId": "1",
+    "userId": "2",
+    "userName": "Jane Smith",
+    "rating": 5,
+    "comment": "Amazing experience! Will definitely come back.",
+    "date": "2025-05-02"
+  },
+  {
+    "id": "3",
+    "restaurantId": "2",
+    "userId": "3",
+    "userName": "Alice Brown",
+    "rating": 4,
+    "comment": "Loved the spicy flavors, great decor!",
+    "date": "2025-05-03"
+  },
+  {
+    "id": "4",
+    "restaurantId": "3",
+    "userId": "4",
+    "userName": "Bob Williams",
+    "rating": 3,
+    "comment": "Good for a quick bite, but a bit noisy.",
+    "date": "2025-05-04"
+  },
+  {
+    "id": "5",
+    "restaurantId": "4",
+    "userId": "5",
+    "userName": "Emily Zhang",
+    "rating": 5,
+    "comment": "Best sushi I've had in years. Will return for sure.",
+    "date": "2025-05-05"
+  },
+  {
+    "id": "6",
+    "restaurantId": "5",
+    "userId": "6",
+    "userName": "Carlos Rivera",
+    "rating": 4,
+    "comment": "Great burgers and fast service. Perfect for lunch breaks.",
+    "date": "2025-05-06"
+  },
+  {
+    "id": "7",
+    "restaurantId": "6",
+    "userId": "7",
+    "userName": "Sarah Johnson",
+    "rating": 5,
+    "comment": "Delicious Thai food! The Pad Thai was amazing.",
+    "date": "2025-05-07"
+  },
+  {
+    "id": "8",
+    "restaurantId": "7",
+    "userId": "8",
+    "userName": "David Lee",
+    "rating": 4,
+    "comment": "Great atmosphere and tasty tacos.",
+    "date": "2025-05-08"
+  },
+  {
+    "id": "9",
+    "restaurantId": "8",
+    "userId": "9",
+    "userName": "Laura Kim",
+    "rating": 3,
+    "comment": "Good food, but a bit overpriced.",
+    "date": "2025-05-09"
+  },
+  {
+    "id": "10",
+    "restaurantId": "9",
+    "userId": "10",
+    "userName": "Nathan Green",
+    "rating": 4,
+    "comment": "Elegant setting and fine French cuisine. Recommended.",
+    "date": "2025-05-06"
+  },
+  {
+    "id": "11",
+    "restaurantId": "10",
+    "userId": "11",
+    "userName": "Jisoo Park",
+    "rating": 5,
+    "comment": "Authentic Korean flavors, loved the Bibimbap!",
+    "date": "2025-05-06"
+  },
+  {
+    "id": "12",
+    "restaurantId": "1",
+    "userId": "12",
+    "userName": "Luca Moretti",
+    "rating": 3,
+    "comment": "Pizza was decent, but the pasta lacked seasoning.",
+    "date": "2025-05-07"
+  },
+  {
+    "id": "13",
+    "restaurantId": "2",
+    "userId": "13",
+    "userName": "Priya Desai",
+    "rating": 4,
+    "comment": "Flavorful curries and friendly staff!",
+    "date": "2025-05-07"
+  },
+  {
+    "id": "14",
+    "restaurantId": "3",
+    "userId": "14",
+    "userName": "Kevin Nguyen",
+    "rating": 5,
+    "comment": "Perfect brunch spot with great coffee options.",
+    "date": "2025-05-07"
+  },
+  {
+    "id": "15",
+    "restaurantId": "4",
+    "userId": "15",
+    "userName": "Maya Tanaka",
+    "rating": 2,
+    "comment": "Disappointed by the freshness of the fish.",
+    "date": "2025-05-06"
+  },
+  {
+    "id": "16",
+    "restaurantId": "5",
+    "userId": "16",
+    "userName": "Jason Hill",
+    "rating": 4,
+    "comment": "Tasty burgers and good value for the price.",
+    "date": "2025-05-07"
   }
-  
+]
+
+}
