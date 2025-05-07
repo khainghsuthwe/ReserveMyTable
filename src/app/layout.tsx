@@ -14,6 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
           rel="stylesheet"
         />
+        <title>ReserveMyTable</title>
+        <meta name="description" content="Book your table at the best restaurants in town." />
       </head>
       <body className="min-h-screen bg-gray-100 flex flex-col">
         <SessionProvider>
