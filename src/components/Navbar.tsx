@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold flex items-center">
           <HomeIcon className="h-6 w-6 mr-2" />
-          Restaurant Reservations
+          ReserveMyTable
         </Link>
         <button
           className="md:hidden"
