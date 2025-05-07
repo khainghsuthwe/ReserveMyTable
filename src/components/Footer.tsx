@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -39,7 +39,7 @@ export default function Footer() {
                 className="flex items-center text-orange-100 hover:text-white transition-colors"
               >
                 <EnvelopeIcon className="h-5 w-5 mr-2" />
-                contact@restaurantreservations.com
+                contact@reservemytable.com
               </a>
               <a
                 href="tel:+1234567890"
@@ -70,16 +70,27 @@ export default function Footer() {
               >
                 <FaFacebook className="h-6 w-6" />
               </motion.a>
+              <motion.a
+                href="https://instagram.com/restaurantreservations"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-100 hover:text-white transition-colors"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FaInstagram className="h-6 w-6" />
+              </motion.a>
             </div>
           </motion.div>
         </div>
+
         <motion.div
           className="mt-8 text-center text-sm text-orange-100"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <p>© {new Date().getFullYear()} Restaurant Reservations. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Reserve My Table. All rights reserved.</p>
         </motion.div>
       </div>
     </motion.footer>
