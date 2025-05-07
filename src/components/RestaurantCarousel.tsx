@@ -19,14 +19,14 @@ export default function RestaurantCarousel({ restaurants }: RestaurantCarouselPr
     <div className="w-full max-w-[1000px] mx-auto px-4 sm:px-0 relative">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={20}
-        slidesPerView={1}
+        spaceBetween={15}
+        slidesPerView={1.2}
         breakpoints={{     
-          480: { slidesPerView: 1.5, spaceBetween: 20 },
-          768: { slidesPerView: 2, spaceBetween: 24 },
+          480: { slidesPerView: 1.5, spaceBetween: 16 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
           840: { slidesPerView: 2.5, spaceBetween: 24 },
           1024: { slidesPerView: 3, spaceBetween: 30 },
-          1280: { slidesPerView: 3, spaceBetween: 30 },
+          1280: { slidesPerView: 3.5, spaceBetween: 32 },
         }}
         centeredSlides={false}
         autoplay={{ delay: 5000 }}

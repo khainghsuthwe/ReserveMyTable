@@ -22,7 +22,7 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         spaceBetween={14}
-        slidesPerView={isSingleSlide ? 1 : 1}
+        slidesPerView={isSingleSlide ? 1 : 1.2}
         breakpoints={{
          
           480: { slidesPerView: isSingleSlide ? 1 : 1.5 },
