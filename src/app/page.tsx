@@ -2,15 +2,17 @@
 
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import { Restaurant, Review } from '@/types';
+import { Restaurant, Review, Cuisine } from '@/types';
 import dummyData from '@/data/dummy.json';
 import { HomeIcon, MagnifyingGlassIcon, CalendarIcon, SparklesIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import RestaurantCarousel from '@/components/RestaurantCarousel';
 import ReviewCarousel from '@/components/ReviewCarousel';
+import CuisineCarousel from '@/components/CuisineCarousel';
 
 const restaurants: Restaurant[] = dummyData.restaurants;
 const reviews: Review[] = dummyData.reviews;
+const cuisines: Cuisine[] = dummyData.cuisines;
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -84,22 +86,17 @@ export default function Home() {
           <RestaurantCarousel restaurants={popularRestaurants} />
         </section>
 
-        {/* Recent Reviews Carousel */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-            What Our Customers Say
-          </h2>
-          <ReviewCarousel reviews={reviews} />
-        </section>
+        {/* Browse by Cuisine */}
+        <CuisineCarousel cuisines={cuisines} />
 
-        {/* Information Cards */}
+        {/* Information Cards (Your Dining Journey) */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
             Your Dining Journey
           </h2>
-          <div className="flex flex-col md:flex-row gap-8 justify-center">
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
             <motion.div
-              className="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center text-center max-w-xs"
+              className="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center text-center w-full sm:max-w-xs"
               variants={cardVariants}
               initial="hidden"
               animate="visible"
@@ -113,7 +110,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center text-center max-w-xs"
+              className="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center text-center w-full sm:max-w-xs"
               variants={cardVariants}
               initial="hidden"
               animate="visible"
@@ -127,7 +124,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center text-center max-w-xs"
+              className="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center text-center w-full sm:max-w-xs"
               variants={cardVariants}
               initial="hidden"
               animate="visible"
@@ -141,6 +138,14 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
+        </section>
+
+        {/* Recent Reviews Carousel */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+            What Our Customers Say
+          </h2>
+          <ReviewCarousel reviews={reviews} />
         </section>
       </main>
     </div>
