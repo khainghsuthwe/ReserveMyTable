@@ -198,7 +198,7 @@ export default function RestaurantDetail() {
                 <div className="space-y-4 mb-6">
                   {restaurant.tableTypes.map((table, index) => (
                     <div
-                      key={table.type}
+                      key={index}
                       className="p-4 bg-orange-50 rounded-lg"
                     >
                       <p className="font-semibold text-gray-800 capitalize">{table.type}</p>
