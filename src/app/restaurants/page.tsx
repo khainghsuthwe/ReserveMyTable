@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState,Suspense } from 'react';
 import { Restaurant, Cuisine } from '@/types';
 import dummyData from '@/data/dummy.json';
 import { BuildingStorefrontIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
@@ -18,7 +18,7 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-export default function RestaurantsPage() {
+function RestaurantsContent () {
   const searchParams = useSearchParams();
   const initialCuisine = searchParams.get('cuisine')?.toLowerCase() || '';
 
@@ -165,6 +165,16 @@ export default function RestaurantsPage() {
           </div>
         )}
       </main>
+    </div>
+  );
+}
+
+export default function RestaurantsPage() {
+  return (
+    <div className="min-h-screen">
+      <Suspense fallback={<div className="text-center py-12">Loading...</div>}>
+        <RestaurantsContent />
+      </Suspense>
     </div>
   );
 }
