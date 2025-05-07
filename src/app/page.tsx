@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { Restaurant, Review, Cuisine } from '@/types';
 import dummyData from '@/data/dummy.json';
-import { HomeIcon, MagnifyingGlassIcon, CalendarIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import {  MagnifyingGlassIcon, CalendarIcon, SparklesIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import RestaurantCarousel from '@/components/RestaurantCarousel';
 import ReviewCarousel from '@/components/ReviewCarousel';
