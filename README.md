@@ -20,6 +20,7 @@ cd restaurant-booking-app
 ```
 
 ### 2. Inatall Dependencies
+Install package dependencies
 ```bash
 npm install
 # or
