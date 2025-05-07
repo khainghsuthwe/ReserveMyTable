@@ -24,7 +24,7 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
         spaceBetween={14}
         slidesPerView={isSingleSlide ? 1 : 1}
         breakpoints={{
-          300: { slidesPerView: isSingleSlide ? 1 : 1.5 },
+         
           480: { slidesPerView: isSingleSlide ? 1 : 1.5 },
           768: { slidesPerView: isSingleSlide ? 1 : 2, spaceBetween: 15 },
           1024: { slidesPerView: isSingleSlide ? 1 : 3, spaceBetween: 16 },

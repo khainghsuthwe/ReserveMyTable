@@ -21,8 +21,7 @@ export default function RestaurantCarousel({ restaurants }: RestaurantCarouselPr
         modules={[Autoplay, Navigation, Pagination]}
         spaceBetween={20}
         slidesPerView={1}
-        breakpoints={{
-          300: { slidesPerView: 1.5, spaceBetween: 20 },
+        breakpoints={{     
           480: { slidesPerView: 1.5, spaceBetween: 20 },
           768: { slidesPerView: 2, spaceBetween: 24 },
           840: { slidesPerView: 2.5, spaceBetween: 24 },
