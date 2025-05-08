@@ -19,7 +19,7 @@ export default function Footer() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Restaurant Reservations</h3>
+            <h3 className="text-2xl font-bold mb-4">ReserveMyTable</h3>
             <p className="text-sm text-orange-100 text-center md:text-left">
               Book your dining experience with ease and enjoy unforgettable moments.
             </p>
