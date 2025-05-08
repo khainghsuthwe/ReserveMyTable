@@ -16,29 +16,87 @@ export default function OwnerDashboard() {
   const { data: session } = useSession();
   const [tables, setTables] = useState<TableAvailability[]>(dummyData.tableAvailability);
 
-  const handleUpdateAvailability = (id: string, available: number, reserved: number) => {
+  const handleUpdateAvailability = (
+    availabilityId: string, 
+    slotId: string, 
+    tableType: string, 
+    available: number
+  ) => {
     setTables((prev) =>
       prev.map((table) =>
-        table.id === id ? { ...table, available, reserved } : table
-      )
-    );
-  };
-
-  const reserveTable = (id: string) => {
-    setTables((prev) =>
-      prev.map((table) =>
-        table.id === id && table.available > 0
-          ? { ...table, available: table.available - 1, reserved: table.reserved + 1 }
+        table.id === availabilityId
+          ? {
+              ...table,
+              timeSlots: table.timeSlots.map((slot) =>
+                slot.id === slotId
+                  ? {
+                      ...slot,
+                      tableTypes: slot.tableTypes.map((type) =>
+                        type.type === tableType ? { ...type, available } : type
+                      ),
+                      availableTables: slot.tableTypes.reduce(
+                        (sum, type) => sum + (type.type === tableType ? available : type.available), 0
+                      ),
+                    }
+                  : slot
+              ),
+            }
           : table
       )
     );
   };
 
-  const unreserveTable = (id: string) => {
+  const reserveTable = (availabilityId: string, slotId: string, tableType: string) => {
     setTables((prev) =>
       prev.map((table) =>
-        table.id === id && table.reserved > 0
-          ? { ...table, available: table.available + 1, reserved: table.reserved - 1 }
+        table.id === availabilityId
+          ? {
+              ...table,
+              timeSlots: table.timeSlots.map((slot) =>
+                slot.id === slotId
+                  ? {
+                      ...slot,
+                      tableTypes: slot.tableTypes.map((type) =>
+                        type.type === tableType && type.available > 0
+                          ? { ...type, available: type.available - 1 }
+                          : type
+                      ),
+                      availableTables: slot.tableTypes.reduce(
+                        (sum, type) => sum + (type.type === tableType && type.available > 0 ? type.available - 1 : type.available), 0
+                      ),
+                      reservedTables: slot.reservedTables + (slot.tableTypes.find(t => t.type === tableType && t.available > 0) ? 1 : 0),
+                    }
+                  : slot
+              ),
+            }
+          : table
+      )
+    );
+  };
+
+  const unreserveTable = (availabilityId: string, slotId: string, tableType: string) => {
+    setTables((prev) =>
+      prev.map((table) =>
+        table.id === availabilityId
+          ? {
+              ...table,
+              timeSlots: table.timeSlots.map((slot) =>
+                slot.id === slotId
+                  ? {
+                      ...slot,
+                      tableTypes: slot.tableTypes.map((type) =>
+                        type.type === tableType && slot.reservedTables > 0
+                          ? { ...type, available: type.available + 1 }
+                          : type
+                      ),
+                      availableTables: slot.tableTypes.reduce(
+                        (sum, type) => sum + (type.type === tableType && slot.reservedTables > 0 ? type.available + 1 : type.available), 0
+                      ),
+                      reservedTables: slot.reservedTables - (slot.tableTypes.find(t => t.type === tableType && slot.reservedTables > 0) ? 1 : 0),
+                    }
+                  : slot
+              ),
+            }
           : table
       )
     );
@@ -71,69 +129,77 @@ export default function OwnerDashboard() {
           {tables.map((table, index) => (
             <motion.div
               key={table.id}
-              className="flex items-center justify-between py-4 border-b border-gray-200"
+              className="py-4 border-b border-gray-200"
               variants={rowVariants}
               initial="hidden"
               animate="visible"
               transition={{ delay: index * 0.1 }}
             >
-              <div className="flex items-center space-x-4">
-                <img
-                  src={table.image}
-                  alt={`Table at ${table.date} ${table.time}`}
-                  className="w-16 h-16 object-cover rounded-lg"
-                />
-                <p className="text-gray-700">
-                  {table.date} at {table.time}
-                </p>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <motion.button
-                    onClick={() => unreserveTable(table.id)}
-                    disabled={table.reserved <= 0}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    -
-                  </motion.button>
-                  <span className="text-gray-800">{table.reserved} reserved</span>
-                  <motion.button
-                    onClick={() => reserveTable(table.id)}
-                    disabled={table.available <= 0}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    +
-                  </motion.button>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">{table.date}</h3>
+              {table.timeSlots.map((slot) => (
+                <div key={slot.id} className="ml-4 mb-4">
+                  <div className="flex items-center justify-between py-2">
+                    <p className="text-gray-700">{slot.time}</p>
+                    <div className="flex items-center space-x-4">
+                      <span className="text-gray-800">
+                        {slot.reservedTables} reserved / {slot.availableTables} available
+                      </span>
+                    </div>
+                  </div>
+                  {slot.tableTypes.map((tableType) => (
+                    <div key={tableType.type} className="ml-4 flex items-center justify-between py-2">
+                      <p className="text-gray-600">{tableType.type}</p>
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2">
+                          <motion.button
+                            onClick={() => unreserveTable(table.id, slot.id, tableType.type)}
+                            disabled={slot.reservedTables <= 0}
+                            className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition-colors"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
+                            -
+                          </motion.button>
+                          <span className="text-gray-800">{tableType.available} available</span>
+                          <motion.button
+                            onClick={() => reserveTable(table.id, slot.id, tableType.type)}
+                            disabled={tableType.available <= 0}
+                            className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition-colors"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
+                            +
+                          </motion.button>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <motion.button
+                            onClick={() =>
+                              handleUpdateAvailability(table.id, slot.id, tableType.type, tableType.available - 1)
+                            }
+                            disabled={tableType.available <= 0}
+                            className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition-colors"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
+                            -
+                          </motion.button>
+                          <span className="text-gray-800">Set availability</span>
+                          <motion.button
+                            onClick={() =>
+                              handleUpdateAvailability(table.id, slot.id, tableType.type, tableType.available + 1)
+                            }
+                            className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
+                            +
+                          </motion.button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex items-center space-x-2">
-                  <motion.button
-                    onClick={() =>
-                      handleUpdateAvailability(table.id, table.available - 1, table.reserved)
-                    }
-                    disabled={table.available <= 0}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    -
-                  </motion.button>
-                  <span className="text-gray-800">{table.available} available</span>
-                  <motion.button
-                    onClick={() =>
-                      handleUpdateAvailability(table.id, table.available + 1, table.reserved)
-                    }
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    +
-                  </motion.button>
-                </div>
-              </div>
+              ))}
             </motion.div>
           ))}
         </div>
