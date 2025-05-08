@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useMemo, useState,Suspense } from 'react';
+import { useEffect, useMemo, useState, Suspense } from 'react';
 import { Restaurant, Cuisine } from '@/types';
 import dummyData from '@/data/dummy.json';
 import { BuildingStorefrontIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
@@ -18,25 +18,33 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-function RestaurantsContent () {
+function RestaurantsContent() {
   const searchParams = useSearchParams();
   const initialCuisine = searchParams.get('cuisine')?.toLowerCase() || '';
+  const initialSearch = searchParams.get('search')?.toLowerCase() || '';
 
   const [area, setArea] = useState('');
   const [cuisine, setCuisine] = useState(initialCuisine);
+  const [search, setSearch] = useState(initialSearch);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     setCuisine(initialCuisine);
-  }, [initialCuisine]);
+    setSearch(initialSearch);
+  }, [initialCuisine, initialSearch]);
 
   const filteredRestaurants = useMemo(() => {
     return restaurants.filter((r) => {
       const matchCuisine = cuisine ? r.cuisine.toLowerCase() === cuisine.toLowerCase() : true;
       const matchArea = area ? r.location.toLowerCase().includes(area.toLowerCase()) : true;
-      return matchCuisine && matchArea;
+      const matchSearch = search
+        ? r.name.toLowerCase().includes(search) ||
+          r.cuisine.toLowerCase().includes(search) ||
+          r.location.toLowerCase().includes(search)
+        : true;
+      return matchCuisine && matchArea && matchSearch;
     });
-  }, [cuisine, area]);
+  }, [cuisine, area, search]);
 
   const totalPages = Math.ceil(filteredRestaurants.length / ITEMS_PER_PAGE);
   const paginatedRestaurants = filteredRestaurants.slice(
@@ -136,7 +144,7 @@ function RestaurantsContent () {
               Previous
             </button>
 
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            {Array.from({ length: totalPages }, (_, i) => i +1).map((page) => (
               <button
                 key={page}
                 onClick={() => handlePageChange(page)}
