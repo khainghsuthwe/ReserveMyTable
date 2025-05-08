@@ -36,12 +36,12 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
           nextEl: '.custom-next',
           prevEl: '.custom-prev',
         }}
-        pagination={{
-          el: '.swiper-pagination',
-          clickable: true,
-          type: 'bullets',
-          renderBullet: (index, className) => `<span class="${className}"></span>`,
-        }}
+        // pagination={{
+        //   el: '.swiper-pagination',
+        //   clickable: true,
+        //   type: 'bullets',
+        //   renderBullet: (index, className) => `<span class="${className}"></span>`,
+        // }}
         className="w-full"
       >
         {reviews.map((review) => (
