@@ -123,7 +123,7 @@
           "name": "Avocado Toast",
           "description": "Toasted sourdough with avocado, cherry tomatoes, and poached egg",
           "price": 9.99,
-          "image": "https://images.unsplash.com/photo-1585238342028-9ff3cf0ef86e"
+          "image": "https://images.pexels.com/photos/3957527/pexels-photo-3957527.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Flat White",
@@ -135,19 +135,19 @@
           "name": "Blueberry Muffin",
           "description": "Soft muffin filled with fresh blueberries",
           "price": 3.25,
-          "image": "https://images.unsplash.com/photo-1598373182133-e301b9bfb5c1"
+          "image": "https://images.pexels.com/photos/18955551/pexels-photo-18955551/free-photo-of-a-cupcake-with-blueberry-frosting.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Quinoa Salad",
           "description": "Healthy salad with quinoa, mixed greens, and vinaigrette",
           "price": 10.50,
-          "image": "https://images.unsplash.com/photo-1589927986089-358123789b0c"
+          "image": "https://images.pexels.com/photos/3872370/pexels-photo-3872370.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Chocolate Croissant",
           "description": "Flaky pastry filled with rich chocolate",
           "price": 2.75,
-          "image": "https://images.unsplash.com/photo-1598515217137-603d9780a041"
+          "image": "https://media.istockphoto.com/id/1138785414/photo/fresh-croissant-close-up-isolated-on-white-background-side-view.jpg?b=1&s=612x612&w=0&k=20&c=eu9UKaY0b6YBgEL5g38oa1Azzq6GZXwAQz_Kq7znx4c="
         }
       ]
     },
@@ -169,25 +169,25 @@
           "name": "Tuna Sashimi",
           "description": "Fresh sliced tuna served with soy sauce and wasabi",
           "price": 16.50,
-          "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+          "image": "https://images.pexels.com/photos/6249518/pexels-photo-6249518.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "California Roll",
           "description": "Crab, avocado, and cucumber rolled in sushi rice",
           "price": 8.50,
-          "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+          "image": "https://images.pexels.com/photos/10692498/pexels-photo-10692498.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Tempura Udon",
           "description": "Thick udon noodles in broth with tempura shrimp",
           "price": 12.00,
-          "image": "https://images.unsplash.com/photo-1601315576609-cd636f39ef38"
+          "image": "https://images.pexels.com/photos/31416983/pexels-photo-31416983/free-photo-of-delicious-tempura-bowl-in-a-traditional-setting.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Sushi Platter",
           "description": "Assortment of fresh nigiri and maki rolls",
           "price": 22.00,
-          "image": "https://images.unsplash.com/photo-1542736667-069246bdbc82"
+          "image": "https://images.pexels.com/photos/31393443/pexels-photo-31393443/free-photo-of-assorted-sushi-and-sashimi-platter-top-view.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
       ]
     },
@@ -208,14 +208,21 @@
           "name": "Cheeseburger Deluxe",
           "description": "Grilled beef patty, cheddar, lettuce, tomato, onion",
           "price": 11.99,
-          "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+          "image": "https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Veggie Burger",
           "description": "Grilled plant-based patty with lettuce, tomato, and vegan mayo",
           "price": 11.25,
           "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+        },
+        {
+          "name": "Sweet Potato Fries",
+          "description": "Crispy sweet potato fries with dipping sauce",
+          "price": 5.50,
+          "image": "https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
+        
       ]
     },
     {
@@ -225,9 +232,9 @@
       "hours": "11:30 AM - 10:30 PM",
       "phone": "(555) 678-9012",
       "cuisine": "Thai",
-      "image": "https://images.unsplash.com/photo-1604908177873-d084d1e3a556",
+      "image": "https://images.pexels.com/photos/18850433/pexels-photo-18850433/free-photo-of-restaurant-in-thailand.jpeg?auto=compress&cs=tinysrgb&w=800",
       "diningPhotos": [
-        "https://images.unsplash.com/photo-1564758866817-73a6d45b8f50"
+        "https://images.pexels.com/photos/5710199/pexels-photo-5710199.jpeg?auto=compress&cs=tinysrgb&w=600"
       ],
       "tableTypes": [
         { "type": "standard", "description": "4 seats, indoor garden view" },
@@ -238,13 +245,25 @@
           "name": "Pad Thai",
           "description": "Stir-fried rice noodles with tamarind sauce, tofu, peanuts",
           "price": 11.50,
-          "image": "https://images.unsplash.com/photo-1600628422011-7d037b2145a3"
+          "image": "https://images.pexels.com/photos/5409024/pexels-photo-5409024.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
           "name": "Lamb Biryani",
           "description": "Spiced basmati rice with tender lamb and aromatic herbs",
           "price": 15.50,
-          "image": "https://images.unsplash.com/photo-1613145991214-3e8fcf86944e"
+          "image": "https://images.pexels.com/photos/17696654/pexels-photo-17696654/free-photo-of-rice-with-meat.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Tom Yum Soup",
+          "description": "Spicy and sour soup with shrimp, mushrooms, and herbs",
+          "price": 7.99,
+          "image": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Green Curry",
+          "description": "Coconut milk curry with chicken and vegetables",
+          "price": 12.00,
+          "image": "https://images.pexels.com/photos/31029754/pexels-photo-31029754/free-photo-of-delicious-thai-green-curry-with-vegetables.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
         
       ]
@@ -292,7 +311,7 @@
           "name": "Grilled Halloumi Salad",
           "description": "Mixed greens with grilled halloumi, olives, lemon vinaigrette",
           "price": 13.25,
-          "image": "https://images.unsplash.com/photo-1613145993483-6a6fbfbb9d44"
+          "image": "https://images.pexels.com/photos/5950848/pexels-photo-5950848.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
       ]
     },
@@ -367,42 +386,115 @@
       "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
     }
   ],
+  
   "tableAvailability": [
     {
-      "id": "1",
-      "date": "2025-05-07",
-      "time": "18:00",
+      "id": "table_avail_1",
       "restaurantId": "1",
-      "available": 5,
-      "reserved": 2,
-      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+      "date": "2025-05-10",
+      "timeSlots": [
+        {
+          "id": "slot_1",
+          "time": "17:00",
+          "availableTables": 5,
+          "reservedTables": 2,
+          "tableTypes": [
+            { "type": "2-person", "available": 3 },
+            { "type": "4-person", "available": 2 }
+          ]
+        },
+        {
+          "id": "slot_2",
+          "time": "17:30",
+          "availableTables": 4,
+          "reservedTables": 3,
+          "tableTypes": [
+            { "type": "2-person", "available": 2 },
+            { "type": "4-person", "available": 2 }
+          ]
+        },
+        {
+          "id": "slot_3",
+          "time": "18:00",
+          "availableTables": 0,
+          "reservedTables": 7,
+          "tableTypes": [
+            { "type": "2-person", "available": 0 },
+            { "type": "4-person", "available": 0 }
+          ]
+        }
+      ]
     },
     {
-      "id": "2",
-      "date": "2025-05-07",
-      "time": "19:00",
+      "id": "table_avail_2",
       "restaurantId": "1",
-      "available": 3,
-      "reserved": 4,
-      "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696"
+      "date": "2025-05-09",
+      "timeSlots": [
+        {
+          "id": "slot_4",
+          "time": "17:00",
+          "availableTables": 6,
+          "reservedTables": 1,
+          "tableTypes": [
+            { "type": "2-person", "available": 4 },
+            { "type": "4-person", "available": 2 }
+          ]
+        },
+        {
+          "id": "slot_5",
+          "time": "17:30",
+          "availableTables": 5,
+          "reservedTables": 2,
+          "tableTypes": [
+            { "type": "2-person", "available": 3 },
+            { "type": "4-person", "available": 2 }
+          ]
+        }
+      ]
     },
     {
-      "id": "3",
-      "date": "2025-05-08",
-      "time": "20:00",
+      "id": "table_avail_3",
+      "restaurantId": "2",
+      "date": "2025-05-11",
+      "timeSlots": [
+        {
+          "id": "slot_6",
+          "time": "17:00",
+          "availableTables": 8,
+          "reservedTables": 0,
+          "tableTypes": [
+            { "type": "2-person", "available": 5 },
+            { "type": "4-person", "available": 3 }
+          ]
+        },
+        {
+          "id": "slot_7",
+          "time": "17:30",
+          "availableTables": 7,
+          "reservedTables": 1,
+          "tableTypes": [
+            { "type": "2-person", "available": 4 },
+            { "type": "4-person", "available": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table_avail_4",
       "restaurantId": "3",
-      "available": 2,
-      "reserved": 6,
-      "image": "https://images.unsplash.com/photo-1574755397413-5d6a1a6ec2c4"
-    },
-    {
-      "id": "4",
-      "date": "2025-05-08",
-      "time": "21:00",
-      "restaurantId": "5",
-      "available": 4,
-      "reserved": 1,
-      "image": "https://images.unsplash.com/photo-1555992336-03a23c7b20b4"
+      "date": "2025-05-10",
+      "timeSlots": [
+        {
+          "id": "slot_8",
+          "time": "17:00",
+          "availableTables": 4,
+          "reservedTables": 2,
+          "tableTypes": [
+            { "type": "2-person", "available": 2 },
+            { "type": "4-person", "available": 2 }
+          ]
+        }
+      ]
     }
   ],
  "reviews": [
