@@ -39,7 +39,7 @@ const deals = [
     expiry: "This weekend only",
     restaurantId: 2,
     image:
-      "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80",
+      "https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 3,
@@ -86,7 +86,7 @@ export default function Home() {
           className="relative h-[400px] md:h-[450px] bg-cover bg-center rounded-xl mb-16 flex items-center justify-center text-center px-4"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80)",
+              "url(https://images.pexels.com/photos/1449773/pexels-photo-1449773.jpeg?auto=compress&cs=tinysrgb&w=600)",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80 rounded-xl"></div>
