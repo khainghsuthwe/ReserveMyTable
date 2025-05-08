@@ -3,7 +3,7 @@
 This is a full-stack **Restaurant Booking App** built with [Next.js](https://nextjs.org), using Google OAuth for authentication. It allows users to browse restaurants and book tables in just a few clicks.
 
 ## Image 
-![Restaurant Booking Banner](https://github.com/khainghsuthwe/restaurant_booking_frontend/tree/main/public/reservemytable.png)
+![Restaurant Booking Banner](https://github.com/khainghsuthwe/restaurant_booking_frontend/blob/main/public/reservemytable.png)
 
 ## 🚀 Live Demo
 
