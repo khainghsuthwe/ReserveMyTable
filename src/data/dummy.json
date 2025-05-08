@@ -198,7 +198,7 @@
       "hours": "11:00 AM - 11:00 PM",
       "phone": "(555) 567-8901",
       "cuisine": "American",
-      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+      "image": "https://images.pexels.com/photos/30600496/pexels-photo-30600496/free-photo-of-vibrant-in-n-out-burger-exterior-in-los-angeles.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "diningPhotos": [],
       "tableTypes": [
         { "type": "standard", "description": "4 seats, casual booth" }
@@ -368,12 +368,12 @@
     {
       "id": "2",
       "name": "Indian",
-      "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398"
+      "image": "https://images.pexels.com/photos/29850004/pexels-photo-29850004/free-photo-of-authentic-indian-feast-with-rich-flavors.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       "id": "3",
       "name": "Cafe",
-      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+      "image": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       "id": "4",
@@ -388,17 +388,17 @@
     {
       "id": "6",
       "name": "Mexican",
-      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+      "image": "https://images.pexels.com/photos/2092897/pexels-photo-2092897.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       "id": "7",
       "name": "Korean",
-      "image": "https://images.unsplash.com/photo-1608219959305-cfdb9f519282"
+      "image": "https://images.pexels.com/photos/5774159/pexels-photo-5774159.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "8",
       "name": "Thai",
-      "image": "https://images.unsplash.com/photo-1599021460193-014f3f399e98"
+      "image": "https://images.pexels.com/photos/1234535/pexels-photo-1234535.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "9",
