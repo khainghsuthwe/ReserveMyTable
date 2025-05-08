@@ -17,7 +17,7 @@ export interface Restaurant {
     price: number;
     image: string;
   }[];
-  reviewCount?: number; // Added in page.tsx for popularRestaurants
+  reviewCount?: number; 
 }
 
 // export interface TableAvailability {
