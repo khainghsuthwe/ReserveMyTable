@@ -83,7 +83,7 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
             Most Popular Restaurants
           </h2>
-          <RestaurantCarousel restaurants={popularRestaurants} />
+          <RestaurantCarousel restaurants={popularRestaurants} reviews={reviews} />
         </section>
 
         {/* Browse by Cuisine */}
