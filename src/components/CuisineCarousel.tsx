@@ -22,7 +22,7 @@ export default function CuisineCarousel({ cuisines }: CuisineCarouselProps) {
   return (
     <div className="mb-16">
       <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center">
-        Browse by Cuisine
+        Cuisines
       </h2>
 
       <Swiper

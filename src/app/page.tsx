@@ -81,7 +81,7 @@ export default function Home() {
         {/* Most Popular Restaurants Carousel */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center">
-            Most Popular Restaurants
+           Popular Restaurants
           </h2>
           <RestaurantCarousel restaurants={popularRestaurants} reviews={reviews} />
         </section>
