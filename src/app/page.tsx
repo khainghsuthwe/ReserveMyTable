@@ -80,7 +80,7 @@ export default function Home() {
 
         {/* Most Popular Restaurants Carousel */}
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center">
             Most Popular Restaurants
           </h2>
           <RestaurantCarousel restaurants={popularRestaurants} reviews={reviews} />
@@ -91,7 +91,7 @@ export default function Home() {
 
         {/* Information Cards (Your Dining Journey) */}
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center">
             Your Dining Journey
           </h2>
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
@@ -142,7 +142,7 @@ export default function Home() {
 
         {/* Recent Reviews Carousel */}
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center">
             What Our Customers Say
           </h2>
           <ReviewCarousel reviews={reviews} />
