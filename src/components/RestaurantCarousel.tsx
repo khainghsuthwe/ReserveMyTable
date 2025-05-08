@@ -33,10 +33,11 @@ export default function RestaurantCarousel({ restaurants, reviews }: RestaurantC
         breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: 15, centeredSlides: true, },
           460: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides: false, },
-          768: { slidesPerView: 2, spaceBetween: 24, centeredSlides: false },
-          840: { slidesPerView: 2.5, spaceBetween: 24,centeredSlides: false },
-          1024: { slidesPerView: 3, spaceBetween: 30 , centeredSlides: false },
-          1280: { slidesPerView: 3, spaceBetween: 30, centeredSlides: false },
+          538: { slidesPerView: 2, spaceBetween: 20, centeredSlides: false, },
+          768: { slidesPerView: 2.5, spaceBetween: 24, centeredSlides: false },
+          840: { slidesPerView: 3, spaceBetween: 24,centeredSlides: false },
+          1024: { slidesPerView: 3.5, spaceBetween: 30 , centeredSlides: false },
+          1280: { slidesPerView: 4, spaceBetween: 30, centeredSlides: false },
         }}
         centeredSlides={true}
         autoplay={{ delay: 5000 }}
