@@ -384,6 +384,31 @@
       "id": "5",
       "name": "American",
       "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "6",
+      "name": "Mexican",
+      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+    },
+    {
+      "id": "7",
+      "name": "Korean",
+      "image": "https://images.unsplash.com/photo-1608219959305-cfdb9f519282"
+    },
+    {
+      "id": "8",
+      "name": "Thai",
+      "image": "https://images.unsplash.com/photo-1599021460193-014f3f399e98"
+    },
+    {
+      "id": "9",
+      "name": "Mediterranean",
+      "image": "https://images.unsplash.com/photo-1576866209830-0b4a53d2b2c0"
+    },
+    {
+      "id": "10",
+      "name": "French",
+      "image": "https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642"
     }
   ],
   
