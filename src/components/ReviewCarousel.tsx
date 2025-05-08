@@ -18,7 +18,7 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
   const isSingleSlide = reviews.length === 1;
 
   return (
-    <div className="w-full max-w-[1000px] mx-auto px-4 sm:px-0 bg-orange-50 rounded-2xl py-8 relative">
+    <div className="w-full  mx-auto px-4 sm:px-0 bg-orange-50 rounded-2xl py-8 relative">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         spaceBetween={14}

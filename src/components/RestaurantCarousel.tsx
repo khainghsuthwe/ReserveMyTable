@@ -23,7 +23,7 @@ export default function RestaurantCarousel({ restaurants, reviews }: RestaurantC
   };
 
   return (
-    <div className="w-full max-w-[1000px] mx-auto px-0 relative ">
+    <div className="w-full  mx-auto px-0 relative ">
       
       <Swiper
         modules={[Autoplay, Pagination]}
