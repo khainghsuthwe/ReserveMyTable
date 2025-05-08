@@ -28,9 +28,26 @@ export default function ReservationPage({ params }: { params: Promise<{ id: stri
   const [reservationStatus, setReservationStatus] = useState('');
 
   useEffect(() => {
-    // Update tableId if pre-selected from query params
-    setReservation((prev) => ({ ...prev, tableId: preSelectedTableId }));
+    // Update tableId and set date if pre-selected from query params
+    if (preSelectedTableId) {
+      const selectedTable = tableAvailability.find((t) => t.id === preSelectedTableId);
+      setReservation((prev) => ({
+        ...prev,
+        tableId: preSelectedTableId,
+        date: selectedTable ? selectedTable.date : '',
+      }));
+    }
   }, [preSelectedTableId]);
+
+  const handleTableChange = (tableId: string) => {
+    const selectedTable = tableAvailability.find((t) => t.id === tableId);
+    setReservation((prev) => ({
+      ...prev,
+      tableId,
+      date: selectedTable ? selectedTable.date : '',
+      time: '', // Reset time when table changes
+    }));
+  };
 
   const handleReservationSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,8 +64,20 @@ export default function ReservationPage({ params }: { params: Promise<{ id: stri
     }
     // Verify table availability
     const selectedTable = tableAvailability.find((t) => t.id === reservation.tableId);
-    if (!selectedTable || selectedTable.available <= 0) {
+    if (!selectedTable) {
       setReservationStatus('Selected table is no longer available.');
+      return;
+    }
+    // Check if any time slot has available tables
+    const hasAvailableTables = selectedTable.timeSlots.some((slot) => slot.availableTables > 0);
+    if (!hasAvailableTables) {
+      setReservationStatus('Selected table is no longer available.');
+      return;
+    }
+    // Find the specific time slot that matches the selected time
+    const selectedSlot = selectedTable.timeSlots.find((slot) => slot.time === reservation.time);
+    if (!selectedSlot || selectedSlot.availableTables <= 0) {
+      setReservationStatus('Selected time slot is no longer available.');
       return;
     }
     // Store reservation in localStorage
@@ -56,9 +85,7 @@ export default function ReservationPage({ params }: { params: Promise<{ id: stri
     reservations.push({
       restaurantId: id,
       restaurantName: restaurant?.name,
-      tableDetails: selectedTable
-        ? `${selectedTable.date} at ${selectedTable.time}, ${selectedTable.available} available`
-        : 'Unknown',
+      tableDetails: `${selectedTable.date} at ${selectedSlot.time}, ${selectedSlot.availableTables} available`,
       ...reservation,
       createdAt: new Date().toISOString(),
     });
@@ -92,16 +119,19 @@ export default function ReservationPage({ params }: { params: Promise<{ id: stri
               <RectangleGroupIcon className="h-5 w-5 text-orange-500 mr-2" />
               <select
                 value={reservation.tableId}
-                onChange={(e) => setReservation({ ...reservation, tableId: e.target.value })}
+                onChange={(e) => handleTableChange(e.target.value)}
                 className="w-full outline-none text-gray-700"
                 required
               >
                 <option value="">Select a Table</option>
                 {tableAvailability
-                  .filter((table) => table.available > 0)
+                  .filter((table) => table.timeSlots.some((slot) => slot.availableTables > 0))
                   .map((table) => (
                     <option key={table.id} value={table.id}>
-                      {table.date} at {table.time} ({table.available} available)
+                      {table.date} ({table.timeSlots
+                        .filter((slot) => slot.availableTables > 0)
+                        .map((slot) => `${slot.time}: ${slot.availableTables} available`)
+                        .join(', ')})
                     </option>
                   ))}
               </select>
@@ -109,22 +139,33 @@ export default function ReservationPage({ params }: { params: Promise<{ id: stri
             <div className="flex items-center border border-gray-300 rounded-lg p-2">
               <CalendarIcon className="h-5 w-5 text-orange-500 mr-2" />
               <input
-                type="date"
+                type="text"
                 value={reservation.date}
-                onChange={(e) => setReservation({ ...reservation, date: e.target.value })}
-                className="w-full outline-none text-gray-700"
-                required
+                className="w-full outline-none text-gray-700 bg-transparent"
+                readOnly
+                placeholder="Select a table to set date"
               />
             </div>
             <div className="flex items-center border border-gray-300 rounded-lg p-2">
               <ClockIcon className="h-5 w-5 text-orange-500 mr-2" />
-              <input
-                type="time"
+              <select
                 value={reservation.time}
                 onChange={(e) => setReservation({ ...reservation, time: e.target.value })}
                 className="w-full outline-none text-gray-700"
                 required
-              />
+                disabled={!reservation.tableId}
+              >
+                <option value="">Select Time</option>
+                {reservation.tableId &&
+                  tableAvailability
+                    .find((t) => t.id === reservation.tableId)
+                    ?.timeSlots.filter((slot) => slot.availableTables > 0)
+                    .map((slot) => (
+                      <option key={slot.id} value={slot.time}>
+                        {slot.time} ({slot.availableTables} available)
+                      </option>
+                    ))}
+              </select>
             </div>
             <div className="flex items-center border border-gray-300 rounded-lg p-2">
               <UsersIcon className="h-5 w-5 text-orange-500 mr-2" />
