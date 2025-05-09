@@ -150,7 +150,7 @@ export default function Navbar() {
               className="flex items-center text-white hover:text-orange-200 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              <UserIcon className="h-6 w-6 mr-2" />
+              <BuildingOffice2Icon className="h-6 w-6 mr-2" />
               Restaurants
             </Link>
           </motion.div>
