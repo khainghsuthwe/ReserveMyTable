@@ -62,7 +62,8 @@ export default function About() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { name: "Jane Doe", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330" },
+            //   { name: "Jane Doe", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330" },
+              { name: "Khaing Hsu Thwe", role: "Founder & CEO", image: "https://github.com/khainghsuthwe.png" },
               { name: "John Smith", role: "CTO", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e" },
               { name: "Emily Johnson", role: "Head of Marketing", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f" },
             ].map((member, index) => (
