@@ -5,8 +5,11 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState, Suspense } from 'react';
 import { Restaurant, Cuisine, TableAvailability } from '@/types';
 import dummyData from '@/data/dummy.json';
-import { ChevronLeftIcon, ChevronRightIcon, XCircleIcon } from '@heroicons/react/24/solid';
+import { BuildingStorefrontIcon, ChevronLeftIcon, ChevronRightIcon,  CalendarIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
 
 const restaurants: Restaurant[] = dummyData.restaurants;
 const cuisines: Cuisine[] = dummyData.cuisines;
@@ -85,8 +88,8 @@ function RestaurantsContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* <BuildingStorefrontIcon className="h-12 w-12 text-orange-500 mr-3" /> */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">Discover Your Next Dining Experience</h1>
+          <BuildingStorefrontIcon className="h-12 w-12 text-orange-500 mr-3" />
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800">Discover Your Next Dining Experience</h1>
         </motion.div>
 
         {/* Filters */}
@@ -101,12 +104,12 @@ function RestaurantsContent() {
             placeholder="Search restaurants, cuisines, or locations..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="border-none bg-white p-3 rounded-lg w-full md:w-1/3 text-gray-700 text-lg shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
+            className="border-none bg-white p-4 rounded-lg w-full md:w-1/3 text-gray-700 text-lg shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none placeholder-gray-500"
           />
           <select
             value={cuisine}
             onChange={(e) => setCuisine(e.target.value)}
-            className="border-none bg-white p-3 rounded-lg w-full md:w-1/3 text-gray-700 text-lg shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
+            className="border-none bg-white p-4 rounded-lg w-full md:w-1/3 text-gray-700 text-lg shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
           >
             <option value="">All Cuisines</option>
             {cuisines.map((c) => (
@@ -115,22 +118,26 @@ function RestaurantsContent() {
               </option>
             ))}
           </select>
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            min={new Date().toISOString().split('T')[0]}
-            className="border-none bg-white p-3 rounded-lg w-full md:w-1/3 text-gray-700 text-lg shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
-          />
+          <div className="relative w-full md:w-1/3">
+            <DatePicker
+              selected={date ? new Date(date) : null}
+              onChange={(date: Date | null) => setDate(date ? date.toISOString().split('T')[0] : '')}
+              minDate={new Date()}
+              placeholderText="Select a date"
+              className="border-none bg-white p-4 pr-12 rounded-lg w-full text-gray-700 text-lg shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none placeholder-gray-500"
+            />
+            <CalendarIcon className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-orange-500" />
+          </div>
           <motion.button
-            onClick={clearFilters}
-            className="bg-orange-500 text-white p-3 rounded-lg w-full md:w-12 h-12 flex items-center justify-center hover:bg-orange-600 transition-colors shadow-sm"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            title="Clear all filters"
-          >
-            <XCircleIcon className="h-6 w-6" />
-          </motion.button>
+          onClick={clearFilters}
+          className="flex items-center justify-center gap-2 bg-red-100 text-red-600 px-4 py-3 rounded-lg w-full md:w-auto font-medium shadow-sm hover:bg-red-200 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Clear all filters"
+        >
+          <ArrowPathIcon className="h-5 w-5" />
+         clear
+        </motion.button>
         </motion.div>
 
         {/* Restaurant Cards */}
