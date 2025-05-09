@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState, Suspense } from 'react';
 import { Restaurant, Cuisine, TableAvailability } from '@/types';
 import dummyData from '@/data/dummy.json';
-import { BuildingStorefrontIcon, ChevronLeftIcon, ChevronRightIcon, XCircleIcon } from '@heroicons/react/24/solid';
+import { ChevronLeftIcon, ChevronRightIcon, XCircleIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 
 const restaurants: Restaurant[] = dummyData.restaurants;
