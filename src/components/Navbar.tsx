@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
-import { HomeIcon, UserIcon, ArrowRightStartOnRectangleIcon, ArrowLeftEndOnRectangleIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { BuildingStorefrontIcon, UserIcon, ArrowRightStartOnRectangleIcon, ArrowLeftEndOnRectangleIcon, XMarkIcon, InformationCircleIcon, BuildingOffice2Icon, CalendarDateRangeIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 
 const mobileMenuVariants = {
@@ -24,7 +24,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold flex items-center">
-          <HomeIcon className="h-6 w-6 mr-2" />
+          <CalendarDateRangeIcon className="h-6 w-6 mr-2" />
           ReserveMyTable
         </Link>
         <button
@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="hidden md:flex md:items-center md:space-x-6">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Link href="/" className="flex items-center text-white hover:text-orange-200 transition-colors">
-              <HomeIcon className="h-5 w-5 mr-1" />
+              <BuildingStorefrontIcon className="h-5 w-5 mr-1" />
               Home
             </Link>
           </motion.div>
@@ -61,8 +61,17 @@ export default function Navbar() {
               href="/restaurants"
               className="flex items-center text-white hover:text-orange-200 transition-colors"
             >
-              <UserIcon className="h-5 w-5 mr-1" />
+              <BuildingOffice2Icon className="h-5 w-5 mr-1" />
               Restaurants
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Link
+              href="/about"
+              className="flex items-center text-white hover:text-orange-200 transition-colors"
+            >
+              <InformationCircleIcon className="h-5 w-5 mr-1" />
+              About
             </Link>
           </motion.div>
           {session ? (
@@ -112,26 +121,26 @@ export default function Navbar() {
         </div>
       </div>
       <motion.div
-        className={`md:hidden fixed top-0 right-0 h-full w-64 bg-orange-500/90 backdrop-blur-md rounded-l-2xl p-6 shadow-lg ${
+        className={`md:hidden fixed top-0 left-0 h-full w-full bg-orange-500/90 backdrop-blur-md p-6 shadow-lg ${
           isOpen ? 'block' : 'hidden'
         }`}
         variants={mobileMenuVariants}
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
       >
-        <div className="flex justify-end mb-4">
+        <div className="flex justify-end mb-6">
           <button onClick={() => setIsOpen(false)}>
             <XMarkIcon className="w-8 h-8 text-white" />
           </button>
         </div>
-        <div className="flex flex-col space-y-6 text-lg">
+        <div className="flex flex-col space-y-8 text-xl items-center">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Link
               href="/"
               className="flex items-center text-white hover:text-orange-200 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              <HomeIcon className="h-6 w-6 mr-2" />
+              <BuildingStorefrontIcon className="h-6 w-6 mr-2" />
               Home
             </Link>
           </motion.div>
@@ -143,6 +152,16 @@ export default function Navbar() {
             >
               <UserIcon className="h-6 w-6 mr-2" />
               Restaurants
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Link
+              href="/about"
+              className="flex items-center text-white hover:text-orange-200 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              <InformationCircleIcon className="h-6 w-6 mr-2" />
+              About
             </Link>
           </motion.div>
           {session ? (
