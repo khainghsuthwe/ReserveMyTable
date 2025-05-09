@@ -155,7 +155,7 @@
       "id": "4",
       "name": "Sushi Wave",
       "location": "321 Bay St, City",
-      "hours": "12:00 PM - 10:00 PM",
+      "hours": "08:00 AM - 10:00 PM",
       "phone": "(555) 456-7890",
       "cuisine": "Japanese",
       "image": "https://images.unsplash.com/photo-1553621042-f6e147245754",
@@ -272,7 +272,7 @@
       "id": "7",
       "name": "Ya Thar Sone",
       "location": "112 Sayarsan Road,Bahan, Yangon",
-      "hours": "9:00 AM - 9:00 PM",
+      "hours": "09:00 AM - 09:00 PM",
       "phone": "(555) 789-0123",
       "cuisine": "Burmese",
       "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
@@ -428,11 +428,11 @@
     {
       "id": "table_avail_1",
       "restaurantId": "1",
-      "date": "2025-05-10",
+      "date": "2025-06-10",
       "timeSlots": [
         {
           "id": "slot_1",
-          "time": "17:00",
+          "time": "11:00",
           "availableTables": 5,
           "reservedTables": 2,
           "tableTypes": [
@@ -442,7 +442,7 @@
         },
         {
           "id": "slot_2",
-          "time": "17:30",
+          "time": "14:30",
           "availableTables": 4,
           "reservedTables": 3,
           "tableTypes": [
@@ -464,8 +464,8 @@
     },
     {
       "id": "table_avail_2",
-      "restaurantId": "1",
-      "date": "2025-05-09",
+      "restaurantId": "7",
+      "date": "2025-05-20",
       "timeSlots": [
         {
           "id": "slot_4",
@@ -496,17 +496,18 @@
       "timeSlots": [
         {
           "id": "slot_6",
-          "time": "17:00",
+          "time": "10:00",
           "availableTables": 8,
           "reservedTables": 0,
           "tableTypes": [
             { "type": "2-person", "available": 5 },
-            { "type": "4-person", "available": 3 }
+            { "type": "4-person", "available": 3 },
+            { "type": "6-person", "available": 3 }
           ]
         },
         {
           "id": "slot_7",
-          "time": "17:30",
+          "time": "13:30",
           "availableTables": 7,
           "reservedTables": 1,
           "tableTypes": [
@@ -527,8 +528,63 @@
           "availableTables": 4,
           "reservedTables": 2,
           "tableTypes": [
+            { "type": "4-person", "available": 2 },
+            { "type": "6-person", "available": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table_avail_5",
+      "restaurantId": "4",
+      "date": "2025-05-12",
+      "timeSlots": [
+        {
+          "id": "slot_9",
+          "time": "09:00",
+          "availableTables": 3,
+          "reservedTables": 1,
+          "tableTypes": [
             { "type": "2-person", "available": 2 },
-            { "type": "4-person", "available": 2 }
+            { "type": "4-person", "available": 1 }
+          ]
+        },
+        {
+          "id": "slot_10",
+          "time": "12:00",
+          "availableTables": 2,
+          "reservedTables": 1,
+          "tableTypes": [
+            { "type": "2-person", "available": 1 },
+            { "type": "4-person", "available": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table_avail_6",
+      "restaurantId": "5",
+      "date": "2025-05-23",
+      "timeSlots": [
+        {
+          "id": "slot_11",
+          "time": "17:00",
+          "availableTables": 10,
+          "reservedTables": 0,
+          "tableTypes": [
+            { "type": "2-person", "available": 6 },
+            { "type": "4-person", "available": 4 },
+            { "type": "6-person", "available": 2 }
+          ]
+        },
+        {
+          "id": "slot_12",
+          "time": "18:00",
+          "availableTables": 8,
+          "reservedTables": 2,
+          "tableTypes": [
+            { "type": "2-person", "available": 5 },
+            { "type": "4-person", "available": 3 }
           ]
         }
       ]
