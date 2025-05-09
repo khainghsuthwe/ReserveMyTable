@@ -270,11 +270,11 @@
     },
     {
       "id": "7",
-      "name": "Casa Mexicana",
-      "location": "202 Fiesta Blvd, City",
-      "hours": "12:00 PM - 11:00 PM",
+      "name": "Ya Thar Sone",
+      "location": "112 Sayarsan Road,Bahan, Yangon",
+      "hours": "9:00 AM - 9:00 PM",
       "phone": "(555) 789-0123",
-      "cuisine": "Mexican",
+      "cuisine": "Burmese",
       "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
       "diningPhotos": [
         "https://plus.unsplash.com/premium_photo-1680116993491-76d3925b95a7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWV4aWNpYW4lMjBjdWlzaW5lc3xlbnwwfHwwfHx8MA%3D%3D",
@@ -286,10 +286,22 @@
       ],
       "menu": [
         {
-          "name": "Tacos Al Pastor",
-          "description": "Marinated pork tacos with pineapple, onion, cilantro",
-          "price": 9.99,
-          "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+          "name": "Mohinga",
+          "description": "Traditional fish soup with rice noodles and herbs",
+          "price": 5.50,
+          "image": "https://images.pexels.com/photos/19134836/pexels-photo-19134836/free-photo-of-white-bowl-of-coconut-noodle-soup-on-a-table.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Tea Leaf Salad",
+          "description": "Fermented tea leaves with nuts and vegetables",
+          "price": 6.00,
+          "image": "https://images.pexels.com/photos/5713771/pexels-photo-5713771.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Shan Noodles",
+          "description": "Rice noodles with chicken, peanuts, and spices",
+          "price": 7.50,
+          "image": "https://images.pexels.com/photos/1001773/pexels-photo-1001773.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
       ]
     },
@@ -387,7 +399,7 @@
     },
     {
       "id": "6",
-      "name": "Mexican",
+      "name": "Burmese",
       "image": "https://images.pexels.com/photos/2092897/pexels-photo-2092897.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
