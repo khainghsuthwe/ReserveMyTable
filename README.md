@@ -1,6 +1,6 @@
 # 🍽️ Restaurant Booking App
 
-This is a full-stack **Restaurant Booking App** built with [Next.js](https://nextjs.org), using Google OAuth for authentication. It allows users to browse restaurants and book tables in just a few clicks.
+ReserveMyTable is a modern **Restaurant Reservation App** built with [Next.js](https://nextjs.org), using Google OAuth for authentication. It allows users  to discover, explore, and reserve tables at their favorite dining spots with ease
 
 ## Image 
 ![Restaurant Booking Banner](https://github.com/khainghsuthwe/restaurant_booking_frontend/blob/main/public/reservemytable.png)
