@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://restaurant-booking-frontend-rho.vercel.app
+
+# Sitemaps
+Sitemap: https://restaurant-booking-frontend-rho.vercel.app/sitemap.xml
